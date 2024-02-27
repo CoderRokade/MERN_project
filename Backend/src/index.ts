@@ -1,18 +1,15 @@
-// import { error } from "console"
-import app from "./app.js"
-import { connecttodatabase } from "./db/connections.js"
+import app from "./app.js";
+import { connectToDatabase } from "./db/connection.js";
 
-//connections and listners
-
+//connections and listeneres
 const PORT = process.env.PORT || 5000;
-
-connecttodatabase()
-.then(()=>{
-    app.listen(PORT,()=>{console.log("server open and connected to database as well")})
-})
-.catch((err)=>{
-    console.log(err)
-})
-
+connectToDatabase()
+  .then(() => {
+    app.listen(PORT, () =>
+      console.log("Server Open & Connected To Database 🤟")
+    );
+  })
+  .catch((err) => console.log(err));
 
 
+  
